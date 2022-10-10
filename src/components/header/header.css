@@ -1,0 +1,11 @@
+.header{
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+.header .logo{
+    padding: 1rem ;
+}
+.header .logo img {
+    height: 32px;
+    width: auto;
+}

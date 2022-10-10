@@ -1,0 +1,18 @@
+.text-field{
+    margin: 1.5rem 0;
+}
+.text-field label{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.text-field input {
+    background-color: #111;
+    border: none;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box; /*Considera padding no width*/
+    color: #7c7c7c;
+    font-size: 1.2rem;
+    padding: 1rem;
+
+    width: 100%
+}

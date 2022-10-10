@@ -1,0 +1,14 @@
+.section__form{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+.form{
+    background-color: #181818;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+    color: #898989;
+    max-width: 1121px;
+    padding: 36px 64px;
+    width: 80%;
+}

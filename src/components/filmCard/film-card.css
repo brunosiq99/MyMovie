@@ -1,0 +1,17 @@
+.film-card{
+    margin-top: 0px;
+    padding: 1pt;
+    
+}
+.film-card .div-img{
+    aspect-ratio: 2/3;
+    background-color: #080808;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width:100%
+}
+.film-card h3{
+    text-indent: 2pt;
+    margin-top: 2pt;
+}
