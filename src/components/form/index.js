@@ -24,8 +24,7 @@ export const Form = (props)=>{
         setFilmTitle('');
         setFilmLink('');
         setFilmImage('');
-        setGenre('');
-        
+        setGenre('');  
     }
     
 

@@ -1,15 +1,33 @@
 .film-card{
-    margin-top: 0px;
-    padding: 1pt;
     
+    padding: 1pt;
+    position: relative;
 }
-.film-card .div-img{
+.film-card:hover button{
+    display: block;
+}
+.film-card .a-img{
     aspect-ratio: 2/3;
     background-color: #080808;
     background-position: center;
     background-size: cover;
     border-radius: 10px;
+    display: block;
     width:100%
+}
+.film-card button{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 2pt;
+    top:2pt;
+    transition: all 250ms;
+}
+.film-card button:hover{
+    color: #ff2222;
+    transform: scale(1.2);
 }
 .film-card h3{
     text-indent: 2pt;

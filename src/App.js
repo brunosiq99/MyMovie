@@ -125,7 +125,9 @@ function App() {
 		setFilmList([...listedFilms, film]);
 	}
 	setInterval(()=>updateLocalStorage(),2500)
-
+	const removeFilm = (removedFilm) => { 
+		setFilmList(listedFilms.filter(film => film !== removedFilm));
+	}
   	return (
 		<div className="App">
 			<Header
@@ -142,6 +144,7 @@ function App() {
 					key={genre.title} 
 					genre={genre}
 					listedFilms={listedFilms.filter(film=> film.genre === genre.title)}
+					onRemoveFilm={removedMovie => removeFilm(removedMovie) }
 				/>
 			)}
 			
