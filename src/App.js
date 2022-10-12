@@ -84,8 +84,8 @@ function App() {
 		const localStorageFilms = JSON.parse(localStorage.getItem('listedFilms'));
 		return (localStorage.getItem('listedFilms') !== null ? localStorageFilms : defaultMoviesList); 
 	}
-	const updateLocalStorage = () => {
-		localStorage.setItem('listedFilms', JSON.stringify(listedFilms));	
+	const updateLocalStorage = (movies) => {
+		localStorage.setItem('listedFilms', JSON.stringify(movies));	
 	}
 
 	const loadedFilmList = setLocalStorage()
@@ -122,11 +122,12 @@ function App() {
 
 	const [listedFilms,setFilmList] = useState(loadedFilmList);
 	const newSavedFilm = (film)=>{
-		setFilmList([...listedFilms, film]);
+		const movies = setFilmList([...listedFilms, film]);
+		updateLocalStorage(movies);
 	}
-	setInterval(()=>updateLocalStorage(),2500)
 	const removeFilm = (removedFilm) => { 
-		setFilmList(listedFilms.filter(film => film !== removedFilm));
+		const movies = setFilmList(listedFilms.filter(film => film !== removedFilm));
+		updateLocalStorage(movies);
 	}
   	return (
 		<div className="App">
