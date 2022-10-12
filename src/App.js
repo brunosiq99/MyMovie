@@ -6,6 +6,36 @@ import { GenreSection } from './components/genreSection';
 
 
 function App() {
+	const genres = [
+		{
+			title:"Ação e aventura",
+			primaryColor: '#57c278'
+		},{
+			title:"Animação",
+			primaryColor:'#a6d157'
+		},{
+			title:"Comédia",
+			primaryColor:'#e06b69'
+		},{
+			title:"Documentário",
+			primaryColor:'#db6ebf'
+		},{
+			title:"Drama",
+			primaryColor:'#db6ebf'
+		},{
+			title:"Ficção científica",
+			primaryColor:'#82cffa'
+		},{
+			title:"Romance",
+			primaryColor:'#db6ebf'
+		},{
+			title:"Suspense",
+			primaryColor:'#ffba05'
+		},{
+			title:"Terror",
+			primaryColor:'#a6d157'
+		}
+    ]
 	const defaultMoviesList = [
 		{
 		  "filmTitle": "Pulp Fiction",
@@ -89,44 +119,17 @@ function App() {
 	}
 
 	const loadedFilmList = setLocalStorage()
-	const genres = [
-		{
-			title:"Ação e aventura",
-			primaryColor: '#57c278'
-		},{
-			title:"Animação",
-			primaryColor:'#a6d157'
-		},{
-			title:"Comédia",
-			primaryColor:'#e06b69'
-		},{
-			title:"Documentário",
-			primaryColor:'#db6ebf'
-		},{
-			title:"Drama",
-			primaryColor:'#db6ebf'
-		},{
-			title:"Ficção científica",
-			primaryColor:'#82cffa'
-		},{
-			title:"Romance",
-			primaryColor:'#db6ebf'
-		},{
-			title:"Suspense",
-			primaryColor:'#ffba05'
-		},{
-			title:"Terror",
-			primaryColor:'#a6d157'
-		}
-    ]
+	
 
 	const [listedFilms,setFilmList] = useState(loadedFilmList);
 	const newSavedFilm = (film)=>{
-		const movies = setFilmList([...listedFilms, film]);
+		const movies = [...listedFilms, film]
+		setFilmList(movies);
 		updateLocalStorage(movies);
 	}
 	const removeFilm = (removedFilm) => { 
-		const movies = setFilmList(listedFilms.filter(film => film !== removedFilm));
+		const movies = listedFilms.filter(film => film !== removedFilm);
+		setFilmList(movies)
 		updateLocalStorage(movies);
 	}
   	return (
