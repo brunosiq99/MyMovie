@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Site
+## Acesse o site
 https://mymovie-eta.vercel.app/
 
 ## Available Scripts
